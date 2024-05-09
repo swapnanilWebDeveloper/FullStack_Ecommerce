@@ -1,0 +1,106 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+.navbar{
+    font-size : 17px;
+    line-height: 26px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px gray;
+    border-bottom : 0.3px solid gray !important;
+}
+
+.nav-link{
+    font-weight: 300 !important;
+}
+
+.active{
+    border-bottom: 2px solid black;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.shopIcon{
+    color: aqua;
+    font-size: 25px;
+}
+
+.shop-box{
+    background: black;
+    padding : 3px 0 5px 8px;
+    width : 30px;
+    height: 40px;
+    align-items: center;
+}
+
+.footer{
+    color : white;
+    padding : 25px;
+    background: black;
+    background: -webkit-linear-gradient(
+        to right,
+        rgb(54, 44, 44),
+        black
+    );
+    background: linear-gradient(to right , rgb(54, 44, 44),black);
+}
+
+.footer a{
+    text-decoration: none;
+    color : white;
+    padding : 10px;
+}
+
+.footer a:hover{
+    color : rgb(245, 185, 107);
+    border-bottom: 1px solid  rgb(245, 185, 107);
+}
+
+.pnf{
+    display : flex;
+    min-height: 65vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pnf-title{
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.pnf-heading{
+    font-weight : normal;
+}
+
+.pnf-btn{
+    color : black;
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.pnf-btn:hover{
+    color : white;
+    background-color: black;
+}
+
+.contactus {
+    margin: 0;
+    padding: 0;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-link{
+    text-decoration: none !important;
+    color: black !important;
+}
