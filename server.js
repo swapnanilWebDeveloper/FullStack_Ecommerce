@@ -32,7 +32,7 @@ app.use("/api/v1/product", productRoutes);
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 }); */
 app.get("/register", async (req, res) => {
-  res.send("<h1>Welcome to ecommerce app</h1>");
+  // res.send("<h1>Welcome to ecommerce app</h1>");
   try {
     const { name, email, password, phone, address, answer } = req.body;
     // validation
