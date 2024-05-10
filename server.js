@@ -31,65 +31,8 @@ app.use("/api/v1/product", productRoutes);
 /* app.use("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 }); */
-app.get("/register", async (req, res) => {
-  // res.send("<h1>Welcome to ecommerce app</h1>");
-  try {
-    const { name, email, password, phone, address, answer } = req.body;
-    // validation
-    if (!name) {
-      return res.send({ message: "Name is Required" });
-    }
-    if (!email) {
-      return res.send({ message: "Email is Required" });
-    }
-    if (!password) {
-      return res.send({ message: "password is Required" });
-    }
-    if (!phone) {
-      return res.send({ message: "phone no is Required" });
-    }
-    if (!address) {
-      return res.send({ message: "address is Required" });
-    }
-    if (!answer) {
-      return res.send({ message: "answer is Required" });
-    }
-    // check user
-    const existingUser = await userModel.findOne({ email: email });
-    console.log(existingUser);
-    // existing user
-    if (existingUser) {
-      console.log("Hello, I am registered here");
-      return res.status(200).send({
-        success: false,
-        message: "Already Registered please login",
-      });
-    }
-    // register user
-    const hashedPassword = await hashPassword(password);
-    // save
-    const user = await new userModel({
-      name,
-      email,
-      phone,
-      address,
-      password: hashedPassword,
-      answer,
-    }).save();
-
-    res.status(201).send({
-      success: true,
-      message: "User Register Successfully",
-      user,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).send({
-      success: false,
-      message: "Error in registration",
-      err,
-    });
-  }
+app.get("/", async (req, res) => {
+  res.send("<h1>Welcome to ecommerce app</h1>");
 });
 
 //PORT
